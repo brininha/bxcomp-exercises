@@ -6,7 +6,7 @@ int main() {
     char frase[255];
     
     scanf("%d", &t);
-    getchar();
+    getchar(); // limpa o \n que ficou
     for (int i = 0; i < t; i++) {
         int counter = 0;
         fgets(frase, sizeof(frase), stdin);
@@ -16,6 +16,7 @@ int main() {
             }
             counter++;
         }
+        // tbm poderia ter usado strlen()
         int result = counter % 3;
         if (result == 1) {
             printf("Que desejo mais interessante, Timmy\n");
